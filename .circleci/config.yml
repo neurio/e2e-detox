@@ -201,29 +201,6 @@ jobs:
       - store_artifacts:
           path: ././reports
           destination: ./reports
-      - pods-dependencies
-      - react-native-dependencies
-      - simulator-dependencies
-      - clear-detox-cache
-
-      - run:
-          working_directory: .
-          name: Run iOS detox build
-          command: npx detox build -c ios.sim.release
-
-      - run:
-          working_directory: .
-          name: Run iOS detox test
-          command: npx detox test -c ios.sim.release --record-logs all > test-summary.txt
-
-      - store_artifacts:
-          path: ././artifacts
-          destination: ./ios-logs
-
-      - store_artifacts:
-          path: ././reports
-          destination: ./reports
-
 
   ios-test:
     macos:
@@ -264,4 +241,5 @@ workflows:
 
   run_detox_tests:
     jobs:
-      - android-test
+      #- android-test
+      #- ios-test
