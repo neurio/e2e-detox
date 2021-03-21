@@ -2,9 +2,8 @@ require_relative '../node_modules/react-native/scripts/react_native_pods'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 platform :ios, '10.0'
 
-target 'GeneracHome' do
+target 'a' do
   config = use_native_modules!
-  # Pods for GeneracHome
 
   use_react_native!(:path => config["reactNativePath"])
   # Enables Flipper.
