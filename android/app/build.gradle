@@ -135,6 +135,7 @@ android {
         versionCode 1
         versionName "1.0"
         testBuildType System.getProperty('testBuildType', 'debug')  // This will later be used to control the test apk build type for detox
+        ndKVersion "22.0.7026061"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
     splits {
