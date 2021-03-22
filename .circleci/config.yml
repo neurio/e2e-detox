@@ -240,7 +240,7 @@ jobs:
           destination: ./reports
       
       - store_test_results:
-          path: /tmp/test-reports
+          path: ./test-reports
 
 
 workflows:
