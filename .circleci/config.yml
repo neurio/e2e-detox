@@ -252,7 +252,7 @@ jobs:
       - persist_to_workspace:
           root: .
           paths: 
-            - buildnum.js
+            - test/buildnum.js
 
 workflows:
   version: 2
