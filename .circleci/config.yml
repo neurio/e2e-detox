@@ -175,7 +175,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: .
-      - run: echo $
+      - run: cat buildnum.js
       - node-version
       - bundle-dependencies
       - npm-dependencies
