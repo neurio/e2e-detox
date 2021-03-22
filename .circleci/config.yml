@@ -172,9 +172,10 @@ jobs:
     macos:
       xcode: 11.3.1
     steps:
+      - checkout
       - attach_workspace:
           at: .
-      - checkout
+      - run: echo $
       - node-version
       - bundle-dependencies
       - npm-dependencies
@@ -262,7 +263,7 @@ workflows:
       - build-placeholder
       - android-test:
           requires:
-            - ios-test
+            - build-placeholder
       - ios-test:
           requires:
             - build-placeholder
