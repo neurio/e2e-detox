@@ -201,6 +201,10 @@ jobs:
       - store_artifacts:
           path: ././reports
           destination: ./reports
+      
+      - store_test_results:
+        path: test-results
+
 
   ios-test:
     macos:
@@ -234,6 +238,9 @@ jobs:
       - store_artifacts:
           path: ././reports
           destination: ./reports
+      
+      - store_test_results:
+        path: test-results
 
 
 workflows:
