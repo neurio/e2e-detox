@@ -213,6 +213,7 @@ jobs:
       - attach_workspace:
           at: .
       - checkout
+      - run: cat buildnum.js
       - node-version
       - bundle-dependencies
       - npm-dependencies
@@ -242,13 +243,25 @@ jobs:
       - store_test_results:
           path: ./test-reports
 
+build-placeholder:
+    macos:
+      xcode: 11.3.1
+    steps:
+      - echo $CIRCLE_BUILD_NUM > buildnum.js
+      - persist_to_workspace:
+          root: .
+          paths: 
+            - buildnum.js
 
 workflows:
   version: 2
 
   run_detox_tests:
     jobs:
+      - build-placeholder
       - android-test:
           requires:
             - ios-test
       - ios-test
+          requires:
+            - build-placeholder
