@@ -262,6 +262,6 @@ workflows:
       - android-test:
           requires:
             - ios-test
-      - ios-test
+      - ios-test:
           requires:
             - build-placeholder
