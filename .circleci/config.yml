@@ -203,7 +203,7 @@ jobs:
           destination: ./reports
       
       - store_test_results:
-        path: test-results
+          path: /tmp/test-reports
 
 
   ios-test:
@@ -240,7 +240,7 @@ jobs:
           destination: ./reports
       
       - store_test_results:
-        path: test-results
+          path: /tmp/test-reports
 
 
 workflows:
