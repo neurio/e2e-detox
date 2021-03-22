@@ -247,8 +247,8 @@ jobs:
     macos:
       xcode: 11.3.1
     steps:
-      - echo $CIRCLE_BUILD_NUM > buildnum.js
-      - cat buildnum.js
+      - run: echo $CIRCLE_BUILD_NUM > buildnum.js
+      - run: cat buildnum.js
       - persist_to_workspace:
           root: .
           paths: 
