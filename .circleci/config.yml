@@ -210,9 +210,9 @@ jobs:
     macos:
       xcode: 11.3.1
     steps:
+      - checkout
       - attach_workspace:
           at: .
-      - checkout
       - run: cat buildnum.js
       - node-version
       - bundle-dependencies
