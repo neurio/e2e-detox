@@ -248,7 +248,7 @@ workflows:
 
   run_detox_tests:
     jobs:
-      - android-test
+      - android-test:
           requires:
             - ios-test
       - ios-test
